@@ -45,10 +45,11 @@
     .list {
       height: calc(100% - 100px);
       overflow-y: auto;
+      touch-action: none;
     }
 
     .cmt {
-      height: 50px;
+      height: 56px;
     }
 
     .cmt:nth-child(2n+1) {
@@ -58,6 +59,23 @@
     .btn-show {
       margin-top: 79px;
     }
+
+    .delete-cmt {
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      padding: 4px 6px;
+      box-shadow: 0 1px 2px #d1d2d3;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
   </style>
 </head>
 
@@ -65,48 +83,82 @@
   <div class="container">
     <button class="btn-show">Show</button>
 
-    <div class="list">
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-    </div>
+    <!-- <div class="list">
+      <div class="cmt">Cmt1 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt2 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt3 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt4 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt5 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt6 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt7 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt8 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt9 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt10 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt11 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt12 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt13 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt14 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt15 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt16 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt17 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+    </div> -->
   </div>
 
   <div class="dialog">
     <div class="version">Version <button class="btn-close">x</button></div>
 
     <div class="list">
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
-      <div class="cmt">Cmt</div>
+      <div class="cmt">Cmt1 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt2 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt3 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt4 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt5 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt6 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt7 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt8 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt9 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt10 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt11 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt12 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt13 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt14 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt15 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt16 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
+      <div class="cmt">Cmt17 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
+      </div>
     </div>
   </div>
 
@@ -120,6 +172,38 @@
     buttonClose.onclick = () => {
       dialog.classList.remove('show')
     }
+
+    let y = 0
+    let scrollTop = 0
+
+    const scroller = document.querySelector('.list')
+    scroller.addEventListener('touchstart', function (e) {
+      e.stopPropagation()
+      y = e.pageY
+    })
+
+    scroller.addEventListener('touchmove', function (e) {
+      scroller.scrollTo({ top: Math.max(scrollTop + y - e.pageY, 0) })
+    })
+
+    scroller.addEventListener('touchend', function (e) {
+      y = e.pageY
+      scrollTop = scroller.scrollTop
+    })
+
+    const iconsDelete = document.querySelectorAll('.delete-cmt')
+    iconsDelete.forEach((icon) => {
+      icon.addEventListener('touchstart', function (e) {
+        e.stopPropagation()
+        e.preventDefault()
+        const dropdown = e.target.parentNode.querySelector('.dropdown')
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show')
+        } else {
+          dropdown.classList.add('show')
+        }
+      })
+    })
   </script>
 </body>
 
