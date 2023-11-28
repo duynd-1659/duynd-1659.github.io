@@ -53,7 +53,6 @@
       overflow-y: auto;
       border: 1px solid #ddd;
       padding: 8px 16px;
-      touch-action: none;
     }
 
     .cmt {
@@ -94,7 +93,8 @@
 <body>
   <div class="container">
     <button class="btn-show">Show</button>
-    <a href="./about.html">Lib</a>
+
+    <a href="./index.html">Custom</a>
 
     <!-- <div class="list">
       <div class="cmt">Cmt1 <span class="delete-cmt">...<div class="dropdown">Delete</div></span>
@@ -175,6 +175,8 @@
     </div>
   </div>
 
+  <script src="./dist/smooth-scrollbar.js"></script>
+
   <script>
     const buttonShow = document.querySelector('.btn-show')
     const buttonClose = document.querySelector('.btn-close')
@@ -185,24 +187,6 @@
     buttonClose.onclick = () => {
       dialog.classList.remove('show')
     }
-
-    let y = 0
-    let scrollTop = 0
-
-    const scroller = document.querySelector('.list')
-    scroller.addEventListener('touchstart', function (e) {
-      e.stopPropagation()
-      y = e.pageY
-    })
-
-    scroller.addEventListener('touchmove', function (e) {
-      scroller.scrollTo({ top: Math.max(scrollTop + y - e.pageY, 0) })
-    })
-
-    scroller.addEventListener('touchend', function (e) {
-      y = e.pageY
-      scrollTop = scroller.scrollTop
-    })
 
     const iconsDelete = document.querySelectorAll('.delete-cmt')
     iconsDelete.forEach((icon) => {
@@ -217,6 +201,10 @@
         }
       })
     })
+
+    var Scrollbar = window.Scrollbar;
+
+    Scrollbar.init(document.querySelector('.list'));
   </script>
 </body>
 
